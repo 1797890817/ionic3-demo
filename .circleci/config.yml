@@ -10,6 +10,9 @@ jobs:
           name: Install node modules
           command: npm install
       - run:
+          name: Check info
+          command: ionic info
+      - run:
           name: Building android
           command: ionic cordova build android
       - store_artifacts:
