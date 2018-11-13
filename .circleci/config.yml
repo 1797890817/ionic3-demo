@@ -10,6 +10,12 @@ jobs:
           name: Install node modules
           command: npm install
       - run:
+          name: Update android sdk 
+          command: yes | $ANDROID_HOME/tools/bin/sdkmanager --update
+      - run:
+          name: Accept sdk lincence 
+          command: yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses || true
+      - run:
           name: Building android
           command: ionic cordova build android
       - store_artifacts:
