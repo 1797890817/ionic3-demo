@@ -18,5 +18,8 @@ jobs:
       - run:
           name: Building android
           command: ionic cordova build android
+      - run:
+          name: Check info
+          command: ionic info
       - store_artifacts:
           path: ~/repo/platforms/android/app/build/outputs/apk/debug/app-debug.apk
