@@ -14,7 +14,7 @@ jobs:
           command: ionic info
       - run:
           name: Accept licence
-          command: echo yes | $ANDROID_HOME/tools/bin/sdkmanager --update
+          command: echo y | $ANDROID_HOME/tools/bin/sdkmanager --update
       - run:
           name: Building android
           command: ionic cordova build android
