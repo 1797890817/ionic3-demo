@@ -13,11 +13,17 @@ jobs:
           name: Check info
           command: ionic info
       - run:
+          name: List sdk info for android
+          command: $ANDROID_HOME/tools/bin/sdkmanager --list
+      - run:
           name: Accept licence
           command: echo y | $ANDROID_HOME/tools/bin/sdkmanager --update
       - run:
           name: Building android
           command: ionic cordova build android
+      - run:
+          name: List sdk info for android
+          command: $ANDROID_HOME/tools/bin/sdkmanager --list
       - run:
           name: Check info
           command: ionic info
