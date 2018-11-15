@@ -6,7 +6,7 @@ echo "===================================="
 curl \
 -F "status=2" \
 -F "notify=2" \
--F "strategy=replace" \
+-F "strategy=add" \
 -F "notes=$GIT_COMMIT_DESC" \
 -F "notes_type=0" \
 -F "ipa=@platforms/android/app/build/outputs/apk/debug/app-debug.apk" \
