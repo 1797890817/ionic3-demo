@@ -31,4 +31,4 @@ jobs:
           path: ~/repo/platforms/android/app/build/outputs/apk/debug/app-debug.apk
       - run:
           name: Deploy to hockey app
-          command: sh ./deploy.sh $GIT_COMMIT_DESC
+          command: sh ./deploy.sh $CIRCLE_SHA1
