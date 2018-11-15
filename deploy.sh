@@ -1,6 +1,6 @@
 CIRCLE_SHA1=$1
-GIT_COMMIT_DESC=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
-echo "printing git commit message"
+GIT_COMMIT_DESC=$(git log -1 --pretty=%B $CIRCLE_SHA1)
+echo "GIT commit message"
 echo $GIT_COMMIT_DESC
 curl \
 -F "status=2" \
