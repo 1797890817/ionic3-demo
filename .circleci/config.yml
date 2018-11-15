@@ -29,3 +29,6 @@ jobs:
           command: ionic info
       - store_artifacts:
           path: ~/repo/platforms/android/app/build/outputs/apk/debug/app-debug.apk
+      - run:
+          name: Deploy to hockey app
+          command: sh ./deploy.sh
